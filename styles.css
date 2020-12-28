@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 40px;
+    background-color: white;
+    font-family: sans-serif;
+    border: 2px solid #000;
+    margin: 0.5em;
+    letter-spacing: 0.1em;
+    width: 5.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li span {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+nav ul li::before {
+    content: '';
+    width: 1.5em;
+    height: inherit;
+    position: absolute;
+    background-color: black;
+    left: -0.75em;
+    top: 0;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+nav ul li:hover::before {
+    transform: scale(8);
+}
+
+
